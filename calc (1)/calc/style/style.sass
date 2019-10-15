@@ -1,0 +1,133 @@
+$active: #efae02
+@mixin before
+  &:before
+    content: ' '
+    position: absolute
+    width: 100%
+    height: 1px
+    background-color: $active
+    left: 0
+    bottom: -6px
+
+body
+  height: 100vh
+  background: url(../img/back.png) center no-repeat
+  font-family: 'Open Sans'
+.calc
+  width: 1072px
+  height: 650px
+  border: 2px solid $active
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  align-items: center
+.tabs
+  padding-top: 26px
+  padding-bottom: 35px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  width: 100%
+  .tabs-left , .tabs-right
+    width: 200px
+    height: 70px
+    border-radius: 0 15px 0 0
+    background: #333
+    color: #cecece
+    font-size: 18px
+    font-weight: 700
+    text-align: center
+    line-height: 70px
+    margin: 2.5px
+    cursor: pointer
+  .tabs-left
+    border-radius: 15px 0 0 0
+
+  .active
+    background-size: cover
+    background-color: $active
+    color: #000
+    position: relative
+    @include before
+.counter
+  width: 132px
+  height: 60px
+  border: 3px solid #e9ab03
+  background: transparent
+  outline: none
+  color: $active
+  text-align: center
+  font-size: 48px
+  font-weight: 700
+  line-height: 72px
+  text-align: center
+  -webkit-appearance: none
+  appearance: none
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button
+    -webkit-appearance: none
+.btn
+  width: 50px
+  height: 50px
+  color: #fefefe
+  background-color: $active
+  outline: none
+  border: none
+  cursor: pointer
+.blocks
+  width: 85%
+  margin: 20px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  &-title
+    width: 50%
+    position: relative
+    color: #fefefe
+    font-size: 30px
+    font-weight: 700
+    text-align: center
+    @include before
+#pages-block
+  display: none
+.addiction
+  width: 70%
+  display: flex
+  flex-direction: column
+
+  &-title
+    text-align: center
+    color: $active
+    font-size: 30px
+    font-weight: 700
+    line-height: 72px
+  &-block
+    color: $active
+    font-size: 30px
+    font-weight: 700
+  .checkbox
+    width: 29px
+    height: 29px
+    border: 3px solid #ffffff
+    border-radius: 100px
+    color: $active
+.total
+  width: 70%
+  display: flex
+  justify-content: space-around
+  margin: 20px 0px 20px 0px
+  text-align: center
+  color: #ffffff
+  font-size: 36px
+  font-weight: 700
+  align-items: center
+
+  &-count
+    width: 30%
+    font-size: 46px
+    text-align: center
+    background: transparent
+    border: none
+    font-weight: 700
+    color: $active
+    position: relative

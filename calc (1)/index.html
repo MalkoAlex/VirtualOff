@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ru"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>Калькулятор ИТ услуг</title>
+    <meta name="description" content="Сделайте точный расчет ИТ аутсорсинга и обслуживания компьютеров, серверов, печатных устройств, телефонии с помощью калькулятора ит услуг.">
+    <meta name="keywords" content="ит калькулятор, калькулятор ит услуг, калькулятор ит аутсорсинг">
+
+    <link rel="stylesheet" href="style/style.css" type="text/css">
+
+    <link rel="shortcut icon" href="image\virtualoff.png" />
+
+</head>
+<body>
+    <header>
+      <div class="logo">
+        <img src="image\virtualoff.png" alt="logo">
+        <span>Калькулятор ИТ услуг</span>
+      </div>
+
+    </header>
+    <main>
+      <div id="calc">
+        <h2>ВЫБЕРИТЕ МОДЕЛЬ ОБСЛУЖИВАНИЯ:</h2>
+        <div class=" select-model-support">
+          <button type="button" name="button" class="active-model-support" id="full">Полный комплекс</button>
+          <button type="button" name="button" id="1st-lvl">Выездная поддержка 1-го уровня</button>
+          <!--<button type="button" name="button" id="2nd-lvl">Поддержка 2-го уровня</button>-->
+        </div>
+        <div class="model-support">
+          <div class="model-support-description">
+            <h3 >Вы выбрали модель обслуживания "<span id="selected-model-support">Комплексный ИТ-аутсорсинг</span>"</h3>
+            Данный подход предназначен для компаний, которые хотят передать все или большинство ИТ-процессов аутсорсеру "под ключ".
+          </div>
+
+
+          <div class="price-block">
+            <div class="price-area">
+              <p>Цена услуг:</p>
+              <span id="price-count"></span>
+              <p>рублей/месяц</p>
+            </div>
+            <div class="offer">
+              Создать коммерческое предложение
+            </div>
+          </div>
+        </div>
+        <div class="optional">
+          <div class="left">
+            <div class="base-circs">
+              <h2>БАЗОВЫЕ УСЛУГИ</h2>
+              <div class="base-option">
+                <h4>SLA (Service Level Agreement)</h4>
+                <span></span>
+              </div> <!--Опция -->
+              <div class="base-option">
+                <h4>ITSM-система (Service Desk)</h4>
+                <span></span>
+              </div> <!--Опция -->
+              <div class="base-option">
+                <h4>Персональный менеджер</h4>
+                <span></span>
+              </div> <!--Опция -->
+              <div class="base-option">
+                <h4>1-я линия техподдержки</h4>
+                <span></span>
+              </div> <!--Опция -->
+              <div class="base-option">
+                <h4>2-я линия техподдержки</h4>
+                <span></span>
+              </div> <!--Опция -->
+              <div class="base-option">
+                <h4>Выезды и физическое воздействие</h4>
+                <span></span>
+              </div> <!--Опция -->
+              <div class="base-option">
+                <h4>Отчетность</h4>
+                <span></span>
+              </div> <!--Опция -->
+            </div>
+            <div class="more-option">
+              <h2>Дополнительные услуги</h2>
+              <div class="more-option-switch">
+                <h4>Логистика</h4>
+                <input type="checkbox" id="more-option-logist">
+              </div>
+              <div class="more-option-switch">
+                <h4>Подменный фонд</h4>
+                <input type="checkbox"  id="more-option-fond" >
+              </div>
+              <div class="more-option-switch">
+                <h4>Взаимодействие с 3-ми сторонами</h4>
+                <input type="checkbox" id="more-option-3th">
+              </div>
+              <div class="more-option-switch">
+                <h4>Стратегия развития</h4>
+                <input type="checkbox" id="more-option-tactic">
+              </div>
+              <div class="more-option-switch">
+                <h4>Расширенная аналитика и отчетность</h4>
+                <input type="checkbox"  id="more-option-analitics">
+              </div>
+            </div>
+          </div>
+          <div class="right">
+            <div class="service-time">
+              <h2>Режимы работы и обслуживания</h2>
+              <div class="select-service-time">
+                <button id='select-service-8-5' class="active-service-time">8/5</button>
+                <button id='select-service-12-5'>12/5</button>
+                <button id='select-service-24-7'>24/7</button>
+              </div>
+            </div>
+            <div class="block-counters">
+              <h2>КОЛИЧЕСТВО ТЕХНИКИ И ОБОРУДОВАНИЯ</h2>
+              <div class="counter">
+                <h4>Количество ПК</h4>
+                <input type="number" min="1"  value="1" step="1" class="counter-area" id="counter-pc">
+                <div class="btns">
+                  <button class="btn" id="btn-plus-pc">+</button>
+                  <button class="btn" id="btn-minus-pc">-</button>
+                </div>
+              </div>
+              <div class="counter">
+                <h4>Количество печатных устройств</h4>
+                <input type="number" min="1"  value="1" step="1" class="counter-area" id="counter-printers">
+                <div class="btns">
+                  <button class="btn" id="btn-plus-print">+</button>
+                  <button class="btn" id="btn-minus-print">-</button>
+                </div>
+              </div>
+              <div class="counter">
+                <h4>Количество серверов</h4>
+                <input type="number" min="1"  value="1" step="1" class="counter-area" id="counter-servers">
+                <div class="btns">
+                  <button class="btn" id="btn-plus-servers">+</button>
+                  <button class="btn" id="btn-minus-servers">-</button>
+                </div>
+              </div>
+              <div class="counter">
+                <h4>Количество единиц активного сетевого оборудования</h4>
+                <input type="number" min="1"  value="1" step="1" class="counter-area" id="counter-routers">
+                <div class="btns">
+                  <button class="btn" id="btn-plus-routers">+</button>
+                  <button class="btn" id="btn-minus-routers">-</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js\var.js">
+    </script>
+    <script src="js/jquery.spincrement.min.js"></script>
+    <script type="text/javascript" src="js\script.js">
+    </script>
+</body>
+</html>

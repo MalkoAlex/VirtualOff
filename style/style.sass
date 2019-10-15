@@ -1,0 +1,283 @@
+@mixin switch
+  width: 5%
+  height: 25px
+  background: #d3d3d3
+  outline: none
+  opacity: 0.7
+  -webkit-transition: .2s
+  transition: opacity .2s
+  border-radius: 15px
+  &::-webkit-slider-thumb
+    width: 25px
+    height: 25px
+    border-radius: 100%
+    cursor: pointer
+body
+  height: 100%
+  margin: auto
+  font-family: Arial
+  background-color: #F0FFFF
+header
+  display: flex
+  width: 60%
+  margin: 0 auto
+  justify-content: center
+  align-items: center
+  padding: 20px
+
+  .logo
+    display: flex
+    justify-content: center
+    align-items: center
+    font-size: 24px
+    font-style: italic
+    span
+      position: relative
+      padding: 3px
+      &::after
+        content: ' '
+        position: absolute
+        width: 100%
+        height: 2px
+        background-color: #000
+        left: 0
+        bottom: 0
+
+#calc
+  width: 80%
+  height: auto
+  margin: 0 auto
+  padding: 0px 0px 50px 0px
+  h2
+    color: #333
+    text-align: center
+    padding: 20px
+  .select-model-support
+    display: flex
+    justify-content: center
+    position: relative
+    &::after
+      content: ' '
+      position: absolute
+      width: 100%
+      height: 2px
+      background-color: #000
+      left: 0
+      bottom: 0
+    .active-model-support
+      background-color: #A8CF45
+      color: #fff
+      font-weight: bold
+    button
+      padding: 1rem
+      margin: 10px
+      font: inherit
+      color: #000
+      background-color: transparent
+      cursor: pointer
+      border: none
+      &:hover
+        background-color: #01ACE4
+        color: #fff
+      &:active , &:after , &:focus
+        border: none
+        outline: none
+
+
+  .model-support
+  .price-block
+    display: flex
+    align-items: center
+    width: 100%
+    color: #FFF
+    justify-content: space-between
+    padding: 5px
+    height: 50px
+    .price-area
+      background-color: #231C64
+      display: flex
+      justify-content: center
+      align-items: center
+      justify-content: space-around
+      width: 50%
+      height: 50px
+      #price-count
+        font-weight: bold
+        margin-left: 1rem
+        font-size: 36px
+    .offer
+        background-color: #A8CF45
+        display: flex
+        justify-content: center
+        align-items: center
+        justify-content: space-around
+        width: 50%
+        height: 50px
+        transition: 0.5s
+        font-weight: bold
+        &:hover
+          cursor: pointer
+          transition: 0.5s
+          background-color: #36AB92
+  .optional
+    display: flex
+    width: 100%
+    justify-content: center
+  .left
+    display: flex
+    width: 50%
+    flex-direction: column
+    .base-circs
+      width: 100%
+      h2
+        margin: 10px
+        padding: 0
+      .base-option
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        border-radius: 10px
+        transition: 0.3s
+        &:hover
+          background-color: #01ACE4
+          transition: 0.3s
+          span
+            background-color: #EEEEEE
+        h4
+          width: 80%
+          max-width: 80%
+          color: #333
+          margin: 10px 10px 10px 10px
+        span
+          display: inline-block
+          width:  25px
+          height: 25px
+          background-color: #01ACE4
+          border-radius: 100%
+          color: #333
+          position: relative
+          background-image: url('../image/gala.svg')
+          background-size: contain
+    .more-option
+      display: flex
+      flex-direction: column
+      justify-content: center
+      h2
+        margin: 10px
+        padding: 0
+      .more-option-switch
+        display: flex
+        align-items: center
+        justify-content: center
+        cursor: pointer
+        border-radius: 10px
+        transition: 0.3s
+        &:hover
+          background-color: #01ACE4
+          transition: 0.3s
+        h4
+          width: 80%
+          max-width: 80%
+          color: #333
+          margin: 10px 10px 10px 10px
+        input
+          @include switch
+          &::-webkit-slider-thumb
+            background-color: #333
+
+        .active-switch
+          &::-webkit-slider-thumb
+            background-color: #A8CF45
+
+
+
+
+  .right
+    display: flex
+    width: 50%
+    flex-direction: column
+  .service-time
+    h2
+      margin: 10px
+      padding: 0
+    .select-service-time
+      display: flex
+      justify-content: center
+      .active-service-time
+        background-color: #A8CF45
+        color: #fff
+        font-weight: bold
+      button
+        padding: 1rem
+        margin: 10px
+        font: inherit
+        color: #000
+        background-color: transparent
+        cursor: pointer
+        border: none
+        &:hover
+          background-color: #01ACE4
+          color: #fff
+        &:active , &:after , &:focus
+          border: none
+          outline: none
+
+  .block-counters
+    width: 100%
+    display: flex
+    flex-direction: column
+    align-items: center
+    h2
+      margin: 10px
+      padding: 0
+    .counter
+      display: flex
+      justify-content: center
+      align-items: center
+      justify-content: flex-end
+      width: 60%
+      transition: 0.3s
+      border-radius: 10px
+      padding: 0px 10px 0px 10px
+      &:hover
+        background-color: #EEEEEE
+        cursor: pointer
+        transition: 0.3s
+      button
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 35px
+        height: 25px
+        text-align: center
+        font-size: 24px
+        font-weight: 700
+        line-height: 24px
+        border: none
+        color: inherit
+        background-color: transparent
+        cursor: pointer
+        background-color: #01ACE4
+        &:hover
+          background-color: #6699CC
+      .counter-area
+        margin: 5px
+        width: 70px
+        height: 40px
+        border: 1px solid #01ACE4
+        background: transparent
+        outline: none
+        text-align: center
+        font-size: 24px
+        font-weight: 700
+        line-height: 72px
+        text-align: center
+        -webkit-appearance: none
+        appearance: none
+      input[type="number"]
+        text-align: center
+        -moz-appearance: textfield
+      input[type="number"]::-webkit-outer-spin-button,
+      input[type="number"]::-webkit-inner-spin-button
+        -webkit-appearance: none
